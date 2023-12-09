@@ -25,7 +25,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Tensor Parallel          | ✅                    | ✅ [^17]                   | 🟠 ** [^12]          | ✅ [^5]            | ✅                  |
 | Pipeline Parallel        | ✅                    | ✅ [^17]                   | ✅                                          | ❓ [^5]            | ❌                  |
 | **Functionality**        |                       |                           |                                             |                   |                    |
-| OpenAI Compatible API    | ✅                    |                           | ✅ [^13]                                    | ❓                 | ✅ [^20]            |
+| OpenAI-Style API         | ✅                    |                           | ✅ [^13]                                    | ❓                 | ✅ [^20]            |
 | Grammars                 | ❌ [^9]               | ❌                         | ✅ [^13]                                    | ❌ [^6]            | ❌                  |
 | Beam Search              | ✅                    | ✅ [^16]                   | ✅ [^14]                                    | ❌ [^7]            | ❌                  |
 | **Quantization**         |                       |                           |                                             |                   |                    |
