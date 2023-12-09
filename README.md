@@ -11,30 +11,29 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Comparison Table
 
-|                          | TGI                  | vLLM                       | llama.cpp                                    | TensorRT-LLM      |
-|--------------------------|----------------------|----------------------------|----------------------------------------------|-------------------|
-| **Performance**          |                      |                            |                                              |                   |
-| FlashAttention           | ✅ [^1]               | ☑️ (xFormers) [^4]         | ❓                                            | ✅ [^16]           |
-| PagedAttention           | ✅                    | ✅ [^1]                    | ❌ [^10]                                     | ✅ [^16]           |
-| Speculative Decoding     | 🔨 [^3]              | 🔨 [^8]                    | ✅ [^11]                                     | 🗓️ [^2]           |
-| Tensor Parallel          | ✅ [^5]               | ✅                         | ❌ (sequential tensor split) [^12]           | ✅ [^17]           |
-| Pipeline Parallel        | ❓ [^5]               | ✅                         | ✅                                           | ✅ [^17]           |
-| **Functionality**        |                      |                            |                                              |                   |
-| OpenAI Compatible API    | ❓                    | ✅                         | ✅ [^13]                                     |                   |
-| Grammars                 | ❌ [^6]               | ❌ [^9]                    | ✅ [^13]                                     | ❌                |
-| Beam Search              | ❌ [^7]               | ✅                         | ✅ [^14]                                     | ✅ [^16]           |
-| **Model Support**        |                      |                            |                                              |                   |
-| LlamaForCausalLM         | ✅                    | ✅                         | ✅                                           | ✅                |
-| MistralForCausalLM       | ✅                    | ✅                         | ✅                                           | ✅                |
-| **Repo**                 |                      |                            |                                              |                   |
-| License                  | HFOILv1.0 [^15]      | Apache 2.0                 | MIT                                         | Apache 2.0        |
-| Github Stars             | 6K                    | 11K                        | 46K                                          | 4K                |Key:
-- ✅ Included
-- ☑️ Equivalent Feature
-- 🔨 In progress / PR
-- 🗓️ Planned / on Roadmap
-- ❓ Unclear / Not officially supported
-- ❌ Not supported
+✅ Included | ☑️ Similar Feature | 🔨 In progress / PR |🗓️ Planned / on Roadmap |❓ Unclear / Not official |❌ Not supported
+
+
+
+|                          | vLLM                  | TensorRT-LLM              | llama.cpp                                   | TGI               |
+|--------------------------|-----------------------|---------------------------|---------------------------------------------|-------------------|
+| **Performance**          |                       |                           |                                             |                   |
+| FlashAttention           | ☑️ (xFormers) [^4]    | ✅ [^16]                   | ❓                                           | ✅ [^1]            |
+| PagedAttention           | ✅ [^1]               | ✅ [^16]                   | ❌ [^10]                                    | ✅                 |
+| Speculative Decoding     | 🔨 [^8]               | 🗓️ [^2]                   | ✅ [^11]                                    | 🔨 [^3]            |
+| Tensor Parallel          | ✅                    | ✅ [^17]                   | ❌ (sequential tensor split) [^12]          | ✅ [^5]            |
+| Pipeline Parallel        | ✅                    | ✅ [^17]                   | ✅                                          | ❓ [^5]            |
+| **Functionality**        |                       |                           |                                             |                   |
+| OpenAI Compatible API    | ✅                    |                           | ✅ [^13]                                    | ❓                 |
+| Grammars                 | ❌ [^9]               | ❌                         | ✅ [^13]                                    | ❌ [^6]            |
+| Beam Search              | ✅                    | ✅ [^16]                   | ✅ [^14]                                    | ❌ [^7]            |
+| **Model Support**        |                       |                           |                                             |                   |
+| LlamaForCausalLM         | ✅                    | ✅                         | ✅                                          | ✅                 |
+| MistralForCausalLM       | ✅                    | ✅                         | ✅                                          | ✅                 |
+| **Repo**                 |                       |                           |                                             |                   |
+| License                  | Apache 2.0            | Apache 2.0                | MIT                                        | HFOILv1.0 [^15]   |
+| Github Stars             | 11K                   | 4K                        | 46K                                         | 6K                |
+
 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
 [^2]: https://github.com/NVIDIA/TensorRT-LLM/issues/169
