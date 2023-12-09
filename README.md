@@ -43,7 +43,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | License                  | Apache 2.0            | Apache 2.0                | MIT                                        | HFOILv1.0 [^15]   | Apache 2.0         |
 | Github Stars             | 11K                   | 4K                        | 46K                                         | 6K                | 1K                 |
 
-*Supports Triton for one-off such as FlashAttention (FusedAttention) / or AWQ, or allows Triton plugins but doesn't use Triton otherwise.
+*Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however it the project doesn't use Triton otherwise.
 
 **Sequentially processed tensor split
 
