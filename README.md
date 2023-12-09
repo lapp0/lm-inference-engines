@@ -23,13 +23,13 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 |                          | vLLM       | TensorRT       | llama.cpp    | TGI         | LightLLM    | DS Fastgen  |
 |--------------------------|------------|----------------|--------------|-------------|-------------|-------------|
 | **Optimizations**        |            |                |              |             |             |             |
-| FlashAttention           | 🟠 [^4]    | ✅ [^16]        | ❓           | ✅ [^1]     | ✅           | ❓         |
-| PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | ☑️ [^19]    |  ❓         |
+| FlashAttention           | 🟠 [^4]    | ✅ [^16]        | ❓           | ✅ [^1]     | ✅           | ✅         |
+| PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | ☑️ [^19]    |  ✅         |
 | Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
 | Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
 | Pipeline Parallel        | ✅         | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
 | **Functionality**        |            |                |              |             |             |             |
-| OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |             |
+| OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |  ❌            |
 | Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         |
 | Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
 | **Scheduling**           |            |                |              |             |             |           |
@@ -37,17 +37,17 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Other Scheduler          | ❌         | ❌             | ❓           | ❓          | EfficientRouter [^24] | Dynamic SplitFuse [^25]        |
 
 | **Quantization**         |            |                |              |             |             |             |
-| AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           |             |
+| AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
 | Other Quants             | SqueezeLLM | ❌              | GGUF         | GPTQ, BnB, EEQT [^18] | ❓ |             |
 | **Models**               |            |                |              |             |             |             |
-| LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |             |
-| MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |             |
+| LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |  ✅          |
+| MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |   ✅         |
 | **Implementation**       |            |                |              |             |             |             |
-| Core Language            | Python     | C++            | C++          | Python/Rust | Python      |             |
-| GPU Language             | CUDA *     | CUDA *         | CUDA         | CUDA *      | Triton/CUDA |             |
+| Core Language            | Python     | C++            | C++          | Python/Rust | Python      | Python        |
+| GPU Language             | CUDA *     | CUDA *         | CUDA         | CUDA *      | Triton/CUDA | CUDA *        |
 | **Repo**                 |            |                |              |             |             |             |
-| License                  | Apache 2.0 | Apache 2.0     | MIT          | HFOILv1.0 [^15] | Apache 2.0 |             |
-| Github Stars             | 11K        | 4K             | 46K          | 6K          | 1K          |             |
+| License                  | Apache 2.0 | Apache 2.0     | MIT          | HFOILv1.0 [^15] | Apache 2.0 | Apache 2.0            |
+| Github Stars             | 11K        | 4K             | 46K          | 6K          | 1K          |  1K            |
 
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however it the project doesn't use Triton otherwise.
