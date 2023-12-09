@@ -11,6 +11,8 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 - [llama.cpp](https://github.com/ggerganov/llama.cpp/)
 - [TGI](https://github.com/huggingface/text-generation-inference/) (**Source Available, but not open**)
 - [LightLLM](https://github.com/ModelTC/lightllm)
+- [DeepSpeed-MII / DeepSpeed-FastGen](https://github.com/microsoft/DeepSpeed-MII)
+
 
 ### Comparison Table
 
@@ -18,30 +20,35 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 
 
-|                          | vLLM                  | TensorRT-LLM              | llama.cpp                                   | TGI               | LightLLM           |
-|--------------------------|-----------------------|---------------------------|---------------------------------------------|-------------------|--------------------|
-| **Performance**          |                       |                           |                                             |                   |                    |
-| FlashAttention           | 🟠 (xFormers) [^4]    | ✅ [^16]                   | ❓                                          | ✅ [^1]           | ✅                  |
-| PagedAttention           | ✅ [^1]               | ✅ [^16]                   | ❌ [^10]                                    | ✅                | ☑️ (TokenAttention) [^19] |
-| Speculative Decoding     | 🔨 [^8]               | 🗓️ [^2]                   | ✅ [^11]                                     | 🔨 [^3]           | ❌                  |
-| Tensor Parallel          | ✅                    | ✅ [^17]                   | 🟠 ** [^12]                                 | ✅ [^5]            | ✅                 | 
-| Pipeline Parallel        | ✅                    | ✅ [^17]                   | ✅                                          | ❓ [^5]           | ❌                  |
-| **Functionality**        |                       |                           |                                             |                   |                    |
-| OpenAI-Style API         | ✅                    | ❌                         | ✅ [^13]                                    | ❓                | ✅ [^20]            |
-| Grammars                 | ❌ [^9]               | ❌                         | ✅ [^13]                                    | ❌ [^6]           | ❌                  |
-| Beam Search              | ✅                    | ✅ [^16]                   | ✅ [^14]                                    | ❌ [^7]           | ❌                  |
-| **Quantization**         |                       |                           |                                             |                   |                    |
-| AWQ                      | ✅                    | ✅                         | ❌                                          | ✅                 | ❌                 |
-| Other Quants             | SqueezeLLM            | ❌                         | GGUF                                        | GPTQ, BnB, EEQT [^18]| ❓             |
-| **Models**               |                       |                           |                                             |                   |                   |
-| LlamaForCausalLM         | ✅                    | ✅                         | ✅                                          | ✅                 | ✅                |
-| MistralForCausalLM       | ✅                    | ✅                         | ✅                                          | ✅                 | 🗓️ [^21]          |
-| **Implementation**       |                       |                           |                                             |                   |                    |
-| Core Language            | Python                | C++                       | C++                                         | Python / Rust     | Python             |
-| GPU Language             | CUDA *                 | CUDA *                    | CUDA                                       | CUDA *            | **Triton** / CUDA  |
-| **Repo**                 |                       |                           |                                             |                   |                    |
-| License                  | Apache 2.0            | Apache 2.0                | MIT                                         | HFOILv1.0 [^15]   | Apache 2.0         |
-| Github Stars             | 11K                   | 4K                        | 46K                                         | 6K                | 1K                 |
+|                          | vLLM       | TensorRT       | llama.cpp    | TGI         | LightLLM    | DS Fastgen  |
+|--------------------------|------------|----------------|--------------|-------------|-------------|-------------|
+| **Optimizations**        |            |                |              |             |             |             |
+| FlashAttention           | 🟠 [^4]    | ✅ [^16]        | ❓           | ✅ [^1]     | ✅           | ❓         |
+| PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | ☑️ [^19]    |  ❓         |
+| Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
+| Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
+| Pipeline Parallel        | ✅         | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
+| **Functionality**        |            |                |              |             |             |             |
+| OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |             |
+| Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         |
+| Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
+| **Scheduling**           |            |                |              |             |             |           |
+| Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
+| Other Scheduler          | ❌         | ❌             | ❓           | ❓          | EfficientRouter [^24] | Dynamic SplitFuse [^25]        |
+
+| **Quantization**         |            |                |              |             |             |             |
+| AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           |             |
+| Other Quants             | SqueezeLLM | ❌              | GGUF         | GPTQ, BnB, EEQT [^18] | ❓ |             |
+| **Models**               |            |                |              |             |             |             |
+| LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |             |
+| MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |             |
+| **Implementation**       |            |                |              |             |             |             |
+| Core Language            | Python     | C++            | C++          | Python/Rust | Python      |             |
+| GPU Language             | CUDA *     | CUDA *         | CUDA         | CUDA *      | Triton/CUDA |             |
+| **Repo**                 |            |                |              |             |             |             |
+| License                  | Apache 2.0 | Apache 2.0     | MIT          | HFOILv1.0 [^15] | Apache 2.0 |             |
+| Github Stars             | 11K        | 4K             | 46K          | 6K          | 1K          |             |
+
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however it the project doesn't use Triton otherwise.
 
@@ -68,3 +75,10 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^19]: https://github.com/ModelTC/lightllm/blob/main/docs/TokenAttention.md
 [^20]: https://github.com/ModelTC/lightllm/blob/main/lightllm/server/api_models.py#L9
 [^21]: https://github.com/ModelTC/lightllm/issues/224#issuecomment-1827365514
+[^22]: https://blog.vllm.ai/2023/11/14/notes-vllm-vs-deepspeed.html
+[^23]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/README.md
+[^24]: https://github.com/ModelTC/lightllm/blob/a9cf0152ad84beb663cddaf93a784092a47d1515/docs/LightLLM.md#efficient-router
+[^25]: https://github.com/microsoft/DeepSpeed-MII
+[^26]: https://github.com/microsoft/DeepSpeed-MII/issues/329#issuecomment-1830317364
+[^27]: https://github.com/microsoft/DeepSpeed-MII/issues/254
+[^28]: https://github.com/microsoft/DeepSpeed-MII/issues/286#issuecomment-1808510043
