@@ -1,5 +1,7 @@
 # Open Inference Engines
 
+[View table](https://github.com/lapp0/lm-inference-engines/blob/main/README.md)
+
 Feel free to create a PR or issue if you want a new engine column, feature row, or update a status. 
 
 ### Compared Inference Engines
