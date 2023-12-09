@@ -23,7 +23,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 |                          | vLLM       | TensorRT       | llama.cpp    | TGI         | LightLLM    | DS Fastgen  |
 |--------------------------|------------|----------------|--------------|-------------|-------------|-------------|
 | **Optimizations**        |            |                |              |             |             |             |
-| FlashAttention           | ✅ [^4]    | ✅ [^16]        | ❓              | ✅ [^1]     | ✅           | ✅         |
+| FlashAttention           | ✅ [^4]    | ✅ [^16]        | ❌              | ✅ [^1]     | ✅           | ✅         |
 | PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | 🟠 ***  [^19]    |  ✅         |
 | Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
 | Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
