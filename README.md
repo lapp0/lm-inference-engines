@@ -23,7 +23,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 |                          | vLLM       | TensorRT       | llama.cpp    | TGI         | LightLLM    | DS Fastgen  |
 |--------------------------|------------|----------------|--------------|-------------|-------------|-------------|
 | **Optimizations**        |            |                |              |             |             |             |
-| FlashAttention           | 🟠 (xFormers) [^4]    | ✅ [^16]        | ❓              | ✅ [^1]     | ✅           | ✅         |
+| FlashAttention           | ✅ [^4]    | ✅ [^16]        | ❓              | ✅ [^1]     | ✅           | ✅         |
 | PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | 🟠 ***  [^19]    |  ✅         |
 | Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
 | Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
@@ -58,7 +58,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
 [^2]: https://github.com/NVIDIA/TensorRT-LLM/issues/169
 [^3]: https://github.com/huggingface/text-generation-inference/pull/1308
-[^4]: https://github.com/vllm-project/vllm/pull/70
+[^4]: https://github.com/vllm-project/vllm/issues/485#issuecomment-1693009046
 [^5]: https://github.com/huggingface/text-generation-inference/issues/1031#issuecomment-1727976990
 [^6]: https://github.com/huggingface/text-generation-inference/issues/1050
 [^7]: https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644
