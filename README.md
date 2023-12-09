@@ -16,17 +16,17 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Comparison Table
 
-☑️ Superior Alternative | ✅ Included | 🟠 Inferior Alternative | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Impl.
+ ✅ Included | 🟠 Inferior Alternative | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Impl.
 
 
 
 |                          | vLLM       | TensorRT       | llama.cpp    | TGI         | LightLLM    | DS Fastgen  |
 |--------------------------|------------|----------------|--------------|-------------|-------------|-------------|
 | **Optimizations**        |            |                |              |             |             |             |
-| FlashAttention           | 🟠 [^4]    | ✅ [^16]        | ❓           | ✅ [^1]     | ✅           | ✅         |
-| PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | ☑️ [^19]    |  ✅         |
+| FlashAttention           | 🟠 (xFormers) [^4]    | ✅ [^16]        | ❓              | ✅ [^1]     | ✅           | ✅         |
+| PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | 🟠 ***  [^19]    |  ✅         |
 | Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
-| Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
+| Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
 | Pipeline Parallel        | ✅         | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
 | **Functionality**        |            |                |              |             |             |             |
 | OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |  ❌            |
@@ -52,6 +52,8 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however the project doesn't use Triton otherwise.
 
 **Sequentially processed tensor split
+
+***["TokenAttention is the special case of PagedAttention when block size equals to 1, which we have tested before and find it under-utilizes GPU compute compared to larger block size. Unless LightLLM's Triton kernel implementation is surprisingly fast, this should not bring speedup."](https://github.com/vllm-project/vllm/issues/670#issuecomment-1664683953)
 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
 [^2]: https://github.com/NVIDIA/TensorRT-LLM/issues/169
