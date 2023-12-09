@@ -6,11 +6,11 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Compared Inference Engines
 
-- TGI: https://github.com/huggingface/text-generation-inference/
-- vLLM: https://github.com/vllm-project/vllm/
-- llama.cpp: https://github.com/ggerganov/llama.cpp/
-- TensorRT-LLM: https://github.com/NVIDIA/TensorRT-LLM
-- LightLLM: https://github.com/ModelTC/lightllm
+- [vLLM](https://github.com/vllm-project/vllm/)
+- [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
+- [llama.cpp](https://github.com/ggerganov/llama.cpp/)
+- [TGI](https://github.com/huggingface/text-generation-inference/) (**Source Available, but not open**)
+- [LightLLM](https://github.com/ModelTC/lightllm)
 
 ### Comparison Table
 
