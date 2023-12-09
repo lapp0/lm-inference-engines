@@ -49,7 +49,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Github Stars             | 11K        | 4K             | 46K          | 6K          | 1K          |  1K            |
 
 
-*Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however it the project doesn't use Triton otherwise.
+*Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however the project doesn't use Triton otherwise.
 
 **Sequentially processed tensor split
 
