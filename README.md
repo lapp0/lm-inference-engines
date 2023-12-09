@@ -12,17 +12,17 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Comparison Table
 
-✅ Included | ☑️ Similar Feature | 🔨 In progress / PR |🗓️ Planned / on Roadmap |❓ Unclear / Not official |❌ Not supported
+☑️ Superior Alternative | ✅ Included | 🟠 Inferior Alternative | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Impl.
 
 
 
 |                          | vLLM                  | TensorRT-LLM              | llama.cpp                                   | TGI               | LightLLM           |
 |--------------------------|-----------------------|---------------------------|---------------------------------------------|-------------------|--------------------|
 | **Performance**          |                       |                           |                                             |                   |                    |
-| FlashAttention           | ☑️ (xFormers) [^4]    | ✅ [^16]                   | ❓                                           | ✅ [^1]            | ✅                  |
+| FlashAttention           | 🟠 (xFormers) [^4]    | ✅ [^16]                   | ❓                                           | ✅ [^1]            | ✅                  |
 | PagedAttention           | ✅ [^1]               | ✅ [^16]                   | ❌ [^10]                                    | ✅                 | ☑️ (TokenAttention) [^19] |
 | Speculative Decoding     | 🔨 [^8]               | 🗓️ [^2]                   | ✅ [^11]                                    | 🔨 [^3]            | ❌                  |
-| Tensor Parallel          | ✅                    | ✅ [^17]                   | ☑️ ** [^12]          | ✅ [^5]            | ✅                  |
+| Tensor Parallel          | ✅                    | ✅ [^17]                   | 🟠 ** [^12]          | ✅ [^5]            | ✅                  |
 | Pipeline Parallel        | ✅                    | ✅ [^17]                   | ✅                                          | ❓ [^5]            | ❌                  |
 | **Functionality**        |                       |                           |                                             |                   |                    |
 | OpenAI Compatible API    | ✅                    |                           | ✅ [^13]                                    | ❓                 | ✅ [^20]            |
@@ -42,6 +42,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Github Stars             | 11K                   | 4K                        | 46K                                         | 6K                | 1K                 |
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / or AWQ, or allows Triton plugins but doesn't use Triton otherwise.
+
 **Sequentially processed tensor split
 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
