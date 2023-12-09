@@ -27,7 +27,10 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | OpenAI Compatible API    | ✅                    |                           | ✅ [^13]                                    | ❓                 |
 | Grammars                 | ❌ [^9]               | ❌                         | ✅ [^13]                                    | ❌ [^6]            |
 | Beam Search              | ✅                    | ✅ [^16]                   | ✅ [^14]                                    | ❌ [^7]            |
-| **Model Support**        |                       |                           |                                             |                   |
+| **Quantization**         |                       |                           |                                             |                   |
+| AWQ                      | ✅                    | ✅                         | ❌                                          | ✅                 |
+| Other Quants             | SqueezeLLM                    |  ❌                         | GGUF                                          | GPTQ, BnB, EEQT [^18]                 |
+| **Models**        |                       |                           |                                             |                   |
 | LlamaForCausalLM         | ✅                    | ✅                         | ✅                                          | ✅                 |
 | MistralForCausalLM       | ✅                    | ✅                         | ✅                                          | ✅                 |
 | **Repo**                 |                       |                           |                                             |                   |
@@ -52,6 +55,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^15]: https://raw.githubusercontent.com/huggingface/text-generation-inference/main/LICENSE
 [^16]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/gpt_attention.md
 [^17]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/cpp/tensorrt_llm/pybind/bindings.cpp#L184
+[^18]: https://github.com/huggingface/text-generation-inference/blob/main/server/text_generation_server/cli.py#L15-L21
 
 ## Notes
 
