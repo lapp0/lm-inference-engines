@@ -35,7 +35,6 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Scheduling**           |            |                |              |             |             |           |
 | Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
 | Other Scheduler          | ❌         | ❌             | ❓           | ❓          | EfficientRouter [^24] | Dynamic SplitFuse [^25]        |
-
 | **Quantization**         |            |                |              |             |             |             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
 | Other Quants             | SqueezeLLM | ❌              | GGUF         | GPTQ, BnB, EEQT [^18] | ❓ |             |
