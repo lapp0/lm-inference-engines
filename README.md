@@ -8,6 +8,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 - vLLM: https://github.com/vllm-project/vllm/
 - llama.cpp: https://github.com/ggerganov/llama.cpp/
 - TensorRT-LLM: https://github.com/NVIDIA/TensorRT-LLM
+- LightLLM: https://github.com/ModelTC/lightllm
 
 ### Comparison Table
 
@@ -64,7 +65,3 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^19]: https://github.com/ModelTC/lightllm/blob/main/docs/TokenAttention.md
 [^20]: https://github.com/ModelTC/lightllm/blob/main/lightllm/server/api_models.py#L9
 [^21]: https://github.com/ModelTC/lightllm/issues/224#issuecomment-1827365514
-
-## Notes
-
-FlexGen is going through a refactor, so it's mostly been left blank.
