@@ -1,31 +1,34 @@
-Compared Inference Engines
+# Open Inference Engines
+
+Feel free to create a PR or issue if you want a new engine column, feature row, or update a status. 
+
+### Compared Inference Engines
 
 - TGI: https://github.com/huggingface/text-generation-inference/
-- vLLM: https://github.com/vllm-project/vllm/tree/main
-- FlexGen: https://github.com/FMInference/FlexGen
-- llama.cpp:
+- vLLM: https://github.com/vllm-project/vllm/
+- llama.cpp: https://github.com/ggerganov/llama.cpp/
+- TensorRT-LLM: https://github.com/NVIDIA/TensorRT-LLM
 
 ### Comparison Table
 
-|                          | TGI                   | vLLM                       | llama.cpp                                    | TensorRT-LLM       | FlexGen            |
-|--------------------------|-----------------------|----------------------------|----------------------------------------------|--------------------|--------------------|
-| **Performance**          |                       |                            |                                              |                    |                    |
-| FlashAttention           | ✅ [^1]                | ☑️ (xFormers) [^4]         | ❓                                           |                    |                    |
-| PagedAttention           | ✅                     | ✅ [^1]                    | ❌ [^10]                                     | 🗓️ [^2]           |                    |
-| Speculative Decoding     | 🔨 [^3]               | 🔨 [^8]                    | ✅ [^11]                                     |                    |                    |
-| Tensor Parallel          | ✅ [^5]                | ✅                         | ❌ (sequential tensor split) [^12]           |                    |                    |
-| Pipeline Parallel        | ❓ [^5]                | ✅                         | ✅                                           |                    |                    |
-| **Features**             |                       |                            |                                              |                    |                    |
-| OpenAI Compatible API    | ❓                     | ✅                         | ✅ [^13]                                     |                    |                    |
-| Grammars                 | ❌ [^6]                | ❌ [^9]                    | ✅ [^13]                                     |                    |                    |
-| Beam Search              | ❌ [^7]                | ✅                         | ✅ [^14]                                     |                    |                    |
-| **Model Support**        |                       |                            |                                              |                    |                    |
-| LlamaForCausalLM         | ✅                     | ✅                         | ✅                                           | ✅                | ❌                 |
-| MistralForCausalLM       | ✅                     | ✅                         | ✅                                           | ✅                | ❌                 |
-| **Repo**                 |                       |                            |                                              |                    |                    |
-| License                  | HFOILv1.0 [^15]       | Apache 2.0                 |                                              |                    |                    |
-| Github Stars             | 6K                     | 11K                        | 46K                                          |                    |                    |
-Key:
+|                          | TGI                  | vLLM                       | llama.cpp                                    | TensorRT-LLM      |
+|--------------------------|----------------------|----------------------------|----------------------------------------------|-------------------|
+| **Performance**          |                      |                            |                                              |                   |
+| FlashAttention           | ✅ [^1]               | ☑️ (xFormers) [^4]         | ❓                                            | ✅ [^16]           |
+| PagedAttention           | ✅                    | ✅ [^1]                    | ❌ [^10]                                     | ✅ [^16]           |
+| Speculative Decoding     | 🔨 [^3]              | 🔨 [^8]                    | ✅ [^11]                                     | 🗓️ [^2]           |
+| Tensor Parallel          | ✅ [^5]               | ✅                         | ❌ (sequential tensor split) [^12]           | ✅ [^17]           |
+| Pipeline Parallel        | ❓ [^5]               | ✅                         | ✅                                           | ✅ [^17]           |
+| **Functionality**        |                      |                            |                                              |                   |
+| OpenAI Compatible API    | ❓                    | ✅                         | ✅ [^13]                                     |                   |
+| Grammars                 | ❌ [^6]               | ❌ [^9]                    | ✅ [^13]                                     | ❌                |
+| Beam Search              | ❌ [^7]               | ✅                         | ✅ [^14]                                     | ✅ [^16]           |
+| **Model Support**        |                      |                            |                                              |                   |
+| LlamaForCausalLM         | ✅                    | ✅                         | ✅                                           | ✅                |
+| MistralForCausalLM       | ✅                    | ✅                         | ✅                                           | ✅                |
+| **Repo**                 |                      |                            |                                              |                   |
+| License                  | HFOILv1.0 [^15]      | Apache 2.0                 | MIT                                         | Apache 2.0        |
+| Github Stars             | 6K                    | 11K                        | 46K                                          | 4K                |Key:
 - ✅ Included
 - ☑️ Equivalent Feature
 - 🔨 In progress / PR
@@ -48,6 +51,8 @@ Key:
 [^13]: https://github.com/ggerganov/llama.cpp/tree/master/examples/server
 [^14]: https://github.com/ggerganov/llama.cpp/tree/master/examples/beam-search
 [^15]: https://raw.githubusercontent.com/huggingface/text-generation-inference/main/LICENSE
+[^16]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/gpt_attention.md
+[^17]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/cpp/tensorrt_llm/pybind/bindings.cpp#L184
 
 ## Notes
 
