@@ -93,5 +93,5 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^32]: https://github.com/eth-sri/lmql/issues/143#issuecomment-1826287242
 [^33]: [LMQL waiting on logit_bias](https://github.com/eth-sri/lmql/issues/190#issuecomment-1686540002) however [TGI logit_bias PR author closed it](https://github.com/huggingface/text-generation-inference/pull/810). [TGI developer states its on their roadmap](https://github.com/huggingface/text-generation-inference/issues/505#issuecomment-1708367609)
 [^34]: https://github.com/vllm-project/vllm/pull/916#issuecomment-1793351502
-[^35]: https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/
+[^35]: [https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/](https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/#pareto-frontiers)https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/#pareto-frontiers
 [^34]: https://github.com/vllm-project/vllm/issues/387
