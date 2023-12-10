@@ -27,7 +27,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | 🟠 ***  [^19]    |  ✅         |
 | Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
 | Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅         | ✅ [^25]         |
-| Pipeline Parallel        | ✅         | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
+| Pipeline Parallel        | ❌ [^34]    | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
 | **Optim. / Scheduler**      |            |                |              |             |            |           |
 | Dyn. SplitFuse (best)     | 🗓️ [^25]   | 🗓️ [^29]       | ❌          | ❌          | ❌           | ✅ [^25]       |
 | Efficient Rtr (better)    | ❌       | ❌               | ❌           | ❌          | ✅ [^24]    | ❌          |
@@ -91,3 +91,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^31]: https://github.com/ggerganov/llama.cpp/blob/master/gguf-py/README.md
 [^32]: https://github.com/eth-sri/lmql/issues/143#issuecomment-1826287242
 [^33]: [LMQL waiting on logit_bias](https://github.com/eth-sri/lmql/issues/190#issuecomment-1686540002) however [TGI logit_bias PR author closed it](https://github.com/huggingface/text-generation-inference/pull/810). [TGI developer states its on their roadmap](https://github.com/huggingface/text-generation-inference/issues/505#issuecomment-1708367609)
+[^34]: https://github.com/vllm-project/vllm/issues/387
