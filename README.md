@@ -25,9 +25,9 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 |----------------------------|-------------|-------------|-------------|-------------|-------------|----------|-----------|
 | **Optimizations**          |             |             |             |             |             |          |           |
 | FlashAttention2            | ✅ [^4]     | ✅ [^16]     | ❌          | ✅ [^1]     | ✅           | ✅       | ✅        |
-| PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠 *** [^19] | ✅       | ❌        |
+| PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19] | ✅       | ❌        |
 | Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | 🔨 [^3]     | ❌           | ❌ [^27] | ✅        |
-| Tensor Parallel            | ✅          | ✅ [^17]     | 🟠 ** [^12] | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
+| Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12] | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
 | Pipeline Parallel          | ❌ [^36]    | ✅ [^17]     | ✅          | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
 | **Optim. / Scheduler**     |             |             |             |             |             |          |           |
 | Dyn. SplitFuse (SOTA[^22]) | 🗓️ [^22]    | 🗓️ [^29]     | ❌          | ❌          | ❌           | ✅ [^22] | ❌        |
@@ -48,7 +48,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | MistralForCausalLM         | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
 | **Implementation**         |             |             |             |             |             |          |           |
 | Core Language              | Python      | C++         | C++         | Python/Rust | Python      | Python   | Python    |
-| GPU API                    | CUDA *      | CUDA *      | Metal/CUDA  | CUDA *      | Triton/CUDA | CUDA *   | CUDA      |
+| GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*      | Triton / CUDA | CUDA*   | CUDA      |
 | **Repo**                   |             |             |             |             |             |          |           |
 | License                    | Apache 2    | Apache 2    | MIT         | HFOIL [^15] | Apache 2    | Apache 2 | MIT       |
 | Github Stars               | 11K         | 4K          | 46K         | 6K          | 1K          | 1K       | 2K        |
