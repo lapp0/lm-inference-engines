@@ -34,10 +34,11 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
 | **Scheduling**           |            |                |              |             |             |           |
 | Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
-| Other Scheduler          | N/A         | N/A            | ❓           | ❓          | EfficientRouter [^24] | Dynamic SplitFuse [^25]        |
+| Dynamic SplitFuse        | 🗓️ [^25]   |                 |             |             |              | ✅ [^25]       |
+| Other Scheduler          | N/A         | N/A            | ❓           | ❓          | EfficientRouter [^24] | N/A |
 | **Quantization**         |            |                |              |             |             |             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
-| Other Quants             | SqueezeLLM | N/A              | GGUF         | GPTQ, BnB, EEQT [^18] | ❓ |             |
+| Other Quants             | SqueezeLLM | N/A              | GGUF         | GPTQ, BnB [^18] | ❓ |             |
 | **Models**               |            |                |              |             |             |             |
 | LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |  ✅          |
 | MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |   ✅         |
