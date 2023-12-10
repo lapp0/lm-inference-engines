@@ -16,7 +16,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Comparison Table
 
- ✅ Included | 🟠 Inferior Alternative | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Impl.
+ ✅ Included | 🟠 Inferior Alternative | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Implemented
 
 
 
