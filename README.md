@@ -47,7 +47,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | LlamaForCausalLM           | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | MistralForCausalLM         | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
 | **Implementation**         |             |             |             |             |             |          |           |
-| Core Language              | Python      | C++         | C++         | Python/Rust | Python      | Python   | Python    |
+| Core Language              | Python      | C++         | C++         | Python / Rust | Python      | Python   | Python    |
 | GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*      | Triton / CUDA | CUDA*   | CUDA      |
 | **Repo**                   |             |             |             |             |             |          |           |
 | License                    | Apache 2    | Apache 2    | MIT         | HFOIL [^15] | Apache 2    | Apache 2 | MIT       |
