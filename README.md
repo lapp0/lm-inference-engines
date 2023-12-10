@@ -34,7 +34,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
 | **Scheduling**           |            |                |              |             |             |           |
 | Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
-| Dynamic SplitFuse        | 🗓️ [^25]   |                 |             |             |              | ✅ [^25]       |
+| Dynamic SplitFuse        | 🗓️ [^25]   | 🗓️ [^29]         | ❌          | ❌          | ❌          | ✅ [^25]       |
 | Other Scheduler          | N/A         | N/A            | ❓           | ❓          | EfficientRouter [^24] | N/A |
 | **Quantization**         |            |                |              |             |             |             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
@@ -84,3 +84,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^26]: https://github.com/microsoft/DeepSpeed-MII/issues/329#issuecomment-1830317364
 [^27]: https://github.com/microsoft/DeepSpeed-MII/issues/254
 [^28]: https://github.com/microsoft/DeepSpeed-MII/issues/286#issuecomment-1808510043
+[^29]: https://github.com/NVIDIA/TensorRT-LLM/issues/317#issuecomment-1810841752
