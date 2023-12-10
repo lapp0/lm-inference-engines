@@ -6,12 +6,13 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Compared Inference Engines
 
-- [vLLM](https://github.com/vllm-project/vllm/)
-- [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
-- [llama.cpp](https://github.com/ggerganov/llama.cpp/)
-- [TGI](https://github.com/huggingface/text-generation-inference/) (**Source Available, but not open**)
-- [LightLLM](https://github.com/ModelTC/lightllm)
-- [DeepSpeed-MII / DeepSpeed-FastGen](https://github.com/microsoft/DeepSpeed-MII)
+- [vLLM](https://github.com/vllm-project/vllm/): Designed to provide SOTA throughput. 
+- [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM): Nvidias design for a high performance extensible pytorch-like API for use with Nvidia Triton Inference Server.
+- [llama.cpp](https://github.com/ggerganov/llama.cpp/): Pure C++ without any dependencies, with Apple Silicon prioritized.
+- [TGI](https://github.com/huggingface/text-generation-inference/): HuggingFace' fast and flexible engine designed for high throughput.  (**Source Available, but not open**)
+- [LightLLM](https://github.com/ModelTC/lightllm): Lightweight, fast and flexible framework targeting performance, written purely in Python / Triton.
+- [DeepSpeed-MII / DeepSpeed-FastGen](https://github.com/microsoft/DeepSpeed-MII): Microsofts high performance implementation including SOTA Dynamic Splitfuse
+- [ExLlamaV2](https://github.com/turboderp/exllamav2): Efficiently run language models on modern consumer GPUs. Implements SOTA quantization method, EXL2.
 
 
 ### Comparison Table
@@ -20,38 +21,37 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 
 
-|                          | vLLM       | TensorRT       | llama.cpp    | TGI         | LightLLM    | DS Fastgen  |
-|--------------------------|------------|----------------|--------------|-------------|-------------|-------------|
-| **Optimizations**        |            |                |              |             |             |             |
-| FlashAttention2           | ✅ [^4]    | ✅ [^16]        | ❌              | ✅ [^1]     | ✅           | ✅         |
-| PagedAttention           | ✅ [^1]    | ✅ [^16]        | ❌ [^10]     | ✅          | 🟠 ***  [^19]    |  ✅         |
-| Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
-| Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅         | ✅ [^25]         |
-| Pipeline Parallel        | ❌ [^36]    | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
-| **Optim. / Scheduler**      |            |                |              |             |            |           |
-| Dyn. SplitFuse (SOTA[^22])     | 🗓️ [^22]   | 🗓️ [^29]       | ❌          | ❌          | ❌           | ✅ [^22]       |
-| Efficient Rtr (better)    | ❌       | ❌               | ❌           | ❌          | ✅ [^24]    | ❌          |
-| Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
-| **Features**             |            |                |              |             |             |             |
-| OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |  ❌            |
-| **Feat. / Sampling**     |            |                |              |            |               |                   |
-| Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
-| LMQL Support             | 🗓️ [^32]   | ❌              | ✅           | ❌ [^33]    | ❌           | ❌              |
-| Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         
-| **Feat. / Quantize**     |            |                |              |             |             |             |
-| EXL2 (SOTA[^35])         | 🔨 [^34]   | ❌              | ❌           | ✅          | ❌           | ❌             |
-| AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
-| Other Quants             | (yes) [^30]  | GPTQ         | GGUF [^31]  | (many) [^18] | ?           |  ?          |
-| **Models**               |            |                |              |             |             |             |
-| LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |  ✅          |
-| MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |   ✅         |
-| **Implementation**       |            |                |              |             |             |             |
-| Core Language            | Python     | C++            | C++          | Python/Rust | Python      | Python        |
-| GPU API                  | CUDA *     | CUDA *         | Metal / CUDA | CUDA *      | Triton/CUDA | CUDA *        |
-| **Repo**                 |            |                |              |             |             |             |
-| License                  | Apache 2.0 | Apache 2.0     | MIT          | HFOILv1.0 [^15] | Apache 2.0 | Apache 2.0            |
-| Github Stars             | 11K        | 4K             | 46K          | 6K          | 1K          |  1K            |
-
+|                            | vLLM        | TensorRT-LLM| llama.cpp   | TGI         | LightLLM    | Fastgen  | ExLlamaV2 |
+|----------------------------|-------------|-------------|-------------|-------------|-------------|----------|-----------|
+| **Optimizations**          |             |             |             |             |             |          |           |
+| FlashAttention2            | ✅ [^4]     | ✅ [^16]     | ❌          | ✅ [^1]     | ✅           | ✅       | ✅        |
+| PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠 *** [^19] | ✅       | ❌        |
+| Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | 🔨 [^3]     | ❌           | ❌ [^27] | ✅        |
+| Tensor Parallel            | ✅          | ✅ [^17]     | 🟠 ** [^12] | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
+| Pipeline Parallel          | ❌ [^36]    | ✅ [^17]     | ✅          | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
+| **Optim. / Scheduler**     |             |             |             |             |             |          |           |
+| Dyn. SplitFuse (SOTA[^22]) | 🗓️ [^22]    | 🗓️ [^29]     | ❌          | ❌          | ❌           | ✅ [^22] | ❌        |
+| Efficient Rtr (better)     | ❌          | ❌           | ❌          | ❌          | ✅ [^24]     | ❌       | ❌        |
+| Cont. Batching             | ✅ [^22]    | ✅ [^23]     | ✅          | ✅          | ❌           | ✅ [^25] | ❓ [^37]  |
+| **Features**               |             |             |             |             |             |          |           |
+| OpenAI-Style API           | ✅          | ❌           | ✅ [^13]    | ❓          | ✅ [^20]     | ❌       | ❌        |
+| **Feat. / Sampling**       |             |             |             |             |             |          |           |
+| Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | ❌ [^7]     | ❌           | ❌ [^28] | ❌ [^38]  |
+| LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
+| Grammars                   | ❌ [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
+| **Feat. / Quantize**       |             |             |             |             |             |          |           |
+| EXL2 (SOTA[^35])           | 🔨 [^34]    | ❌           | ❌          | ✅          | ❌           | ❌       | ✅        |
+| AWQ                        | ✅          | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
+| Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
+| **Models**                 |             |             |             |             |             |          |           |
+| LlamaForCausalLM           | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
+| MistralForCausalLM         | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
+| **Implementation**         |             |             |             |             |             |          |           |
+| Core Language              | Python      | C++         | C++         | Python/Rust | Python      | Python   | Python    |
+| GPU API                    | CUDA *      | CUDA *      | Metal/CUDA  | CUDA *      | Triton/CUDA | CUDA *   | CUDA      |
+| **Repo**                   |             |             |             |             |             |          |           |
+| License                    | Apache 2    | Apache 2    | MIT         | HFOIL [^15] | Apache 2    | Apache 2 | MIT       |
+| Github Stars               | 11K         | 4K          | 46K         | 6K          | 1K          | 1K       | 2K        |
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however the project doesn't use Triton otherwise.
 
@@ -95,3 +95,5 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^34]: https://github.com/vllm-project/vllm/pull/916#issuecomment-1793351502
 [^35]: [https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/](https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/#pareto-frontiers)https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/#pareto-frontiers
 [^36]: https://github.com/vllm-project/vllm/issues/387
+[^37]: https://github.com/turboderp/exllamav2/discussions/19#discussioncomment-6989460
+[^38]: https://github.com/turboderp/exllamav2/issues/84
