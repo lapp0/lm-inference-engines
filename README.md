@@ -29,7 +29,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅         | ✅ [^25]         |
 | Pipeline Parallel        | ❌ [^34]    | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
 | **Optim. / Scheduler**      |            |                |              |             |            |           |
-| Dyn. SplitFuse (best)     | 🗓️ [^25]   | 🗓️ [^29]       | ❌          | ❌          | ❌           | ✅ [^25]       |
+| Dyn. SplitFuse (SOTA[^22])     | 🗓️ [^22]   | 🗓️ [^29]       | ❌          | ❌          | ❌           | ✅ [^22]       |
 | Efficient Rtr (better)    | ❌       | ❌               | ❌           | ❌          | ✅ [^24]    | ❌          |
 | Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
 | **Features**             |            |                |              |             |             |             |
@@ -39,8 +39,9 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | LMQL Support             | 🗓️ [^32]   | ❌              | ✅           | ❌ [^33]    | ❌           | ❌              |
 | Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         
 | **Feat. / Quantize**     |            |                |              |             |             |             |
+| EXL2 (SOTA[^35])         | 🔨 [^34]   | ❌              | ❌           | ✅          | ❌           | ❌             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
-| Other Quants             | (yes) [^30]  | GPTQ         | (yes) [^31]  | (yes) [^18] | ?           |  ?          |
+| Other Quants             | (yes) [^30]  | GPTQ         | GGUF [^31]  | (many) [^18] | ?           |  ?          |
 | **Models**               |            |                |              |             |             |             |
 | LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |  ✅          |
 | MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |   ✅         |
@@ -91,4 +92,6 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^31]: https://github.com/ggerganov/llama.cpp/blob/master/gguf-py/README.md
 [^32]: https://github.com/eth-sri/lmql/issues/143#issuecomment-1826287242
 [^33]: [LMQL waiting on logit_bias](https://github.com/eth-sri/lmql/issues/190#issuecomment-1686540002) however [TGI logit_bias PR author closed it](https://github.com/huggingface/text-generation-inference/pull/810). [TGI developer states its on their roadmap](https://github.com/huggingface/text-generation-inference/issues/505#issuecomment-1708367609)
+[^34]: https://github.com/vllm-project/vllm/pull/916#issuecomment-1793351502
+[^35]: https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/
 [^34]: https://github.com/vllm-project/vllm/issues/387
