@@ -38,7 +38,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
 | **Quantization**         |            |                |              |             |             |             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
-| Other Quants             | (yes) [^30]  | (no)         | (yes) [^31]  | (yes) [^18] | ?           |  ?          |
+| Other Quants             | (yes) [^30]  | GPTQ         | (yes) [^31]  | (yes) [^18] | ?           |  ?          |
 | **Models**               |            |                |              |             |             |             |
 | LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |  ✅          |
 | MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |   ✅         |
