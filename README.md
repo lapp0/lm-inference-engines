@@ -32,10 +32,12 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Dyn. SplitFuse (best)     | 🗓️ [^25]   | 🗓️ [^29]       | ❌          | ❌          | ❌           | ✅ [^25]       |
 | Efficient Rtr (better)    | ❌       | ❌               | ❌           | ❌          | ✅ [^24]    | ❌          |
 | Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
-| **Functionality**        |            |                |              |             |             |             |
+| **Features**             |            |                |              |             |             |             |
 | OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |  ❌            |
-| Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         |
+| **Feat. / Sampling**     |            |                |              |            |               |                   |
 | Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
+| LMQL Support             | 🗓️ [^32]   | ❌              | ✅           | ❌ [^33]    | ❌           | ❌              |
+| Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         
 | **Quantization**         |            |                |              |             |             |             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
 | Other Quants             | (yes) [^30]  | GPTQ         | (yes) [^31]  | (yes) [^18] | ?           |  ?          |
@@ -87,3 +89,5 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^29]: https://github.com/NVIDIA/TensorRT-LLM/issues/317#issuecomment-1810841752
 [^30]: https://github.com/vllm-project/vllm/blob/1f24755bf802a2061bd46f3dd1191b7898f13f45/vllm/model_executor/quantization_utils/squeezellm.py#L8
 [^31]: https://github.com/ggerganov/llama.cpp/blob/master/gguf-py/README.md
+[^32]: https://github.com/eth-sri/lmql/issues/143#issuecomment-1826287242
+[^33]: [LMQL waiting on logit_bias](https://github.com/eth-sri/lmql/issues/190#issuecomment-1686540002) however [TGI logit_bias PR author closed it](https://github.com/huggingface/text-generation-inference/pull/810). [TGI developer states its on their roadmap](https://github.com/huggingface/text-generation-inference/issues/505#issuecomment-1708367609)
