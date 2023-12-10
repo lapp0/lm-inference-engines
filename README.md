@@ -31,7 +31,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Optim / Batching**      |            |                |              |             |             |           |
 | Dyn. SplitFuse (best)     | 🗓️ [^25]   | 🗓️ [^29]         | ❌          | ❌          | ❌          | ✅ [^25]       |
 | Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
-| Other Scheduler          | (no)       | (no)           | ?           | ?          | (yes) [^24]   | N/A |
+| Other Scheduler          | (no)       | (no)           | ?           | ?          | (yes) [^24]   | (no)          |
 | **Functionality**        |            |                |              |             |             |             |
 | OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |  ❌            |
 | Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         |
