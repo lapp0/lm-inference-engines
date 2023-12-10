@@ -28,17 +28,17 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Speculative Decoding     | 🔨 [^8]    | 🗓️ [^2]        | ✅ [^11]     | 🔨 [^3]     | ❌           |  ❌ [^27]       |
 | Tensor Parallel          | ✅         | ✅ [^17]        | 🟠 ** [^12]     | ✅ [^5]     | ✅           | ✅ [^25]         |
 | Pipeline Parallel        | ✅         | ✅ [^17]        | ✅           | ❓ [^5]     | ❌           | ❌ [^26]            |
+| **Optim / Batching**      |            |                |              |             |             |           |
+| Dyn. SplitFuse (best)     | 🗓️ [^25]   | 🗓️ [^29]         | ❌          | ❌          | ❌          | ✅ [^25]       |
+| Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
+| Other Scheduler          | (no)       | (no)           | ?           | ?          | (yes) [^24]   | N/A |
 | **Functionality**        |            |                |              |             |             |             |
 | OpenAI-Style API         | ✅         | ❌              | ✅ [^13]     | ❓           | ✅ [^20]     |  ❌            |
 | Grammars                 | ❌ [^9]    | ❌              | ✅ [^13]     | ❌ [^6]     | ❌           | ❌         |
 | Beam Search              | ✅         | ✅ [^16]        | ✅ [^14]     | ❌ [^7]     | ❌           | ❌ [^28]            |
-| **Scheduling**           |            |                |              |             |             |           |
-| Cont. Batching           | ✅ [^22]   | ✅ [^23]        | ✅           | ✅          | ❌           | ✅ [^25]       |
-| Dynamic SplitFuse        | 🗓️ [^25]   | 🗓️ [^29]         | ❌          | ❌          | ❌          | ✅ [^25]       |
-| Other Scheduler          | N/A         | N/A            | ❓           | ❓          | EfficientRouter [^24] | N/A |
 | **Quantization**         |            |                |              |             |             |             |
 | AWQ                      | ✅         | ✅              | ❌           | ✅          | ❌           | ❌             |
-| Other Quants             | SqueezeLLM | N/A              | GGUF         | GPTQ, BnB [^18] | ❓ |             |
+| Other Quants             | (yes) [^30]  | (no)         | (yes) [^31]  | (yes) [^18] | ?           |  ?          |
 | **Models**               |            |                |              |             |             |             |
 | LlamaForCausalLM         | ✅         | ✅              | ✅           | ✅          | ✅           |  ✅          |
 | MistralForCausalLM       | ✅         | ✅              | ✅           | ✅          | 🗓️ [^21]    |   ✅         |
@@ -85,3 +85,5 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^27]: https://github.com/microsoft/DeepSpeed-MII/issues/254
 [^28]: https://github.com/microsoft/DeepSpeed-MII/issues/286#issuecomment-1808510043
 [^29]: https://github.com/NVIDIA/TensorRT-LLM/issues/317#issuecomment-1810841752
+[^30]: https://github.com/vllm-project/vllm/blob/1f24755bf802a2061bd46f3dd1191b7898f13f45/vllm/model_executor/quantization_utils/squeezellm.py#L8
+[^31]: https://github.com/ggerganov/llama.cpp/blob/master/gguf-py/README.md
