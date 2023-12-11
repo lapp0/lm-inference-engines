@@ -44,8 +44,8 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
 | Grammars                   | ❌ [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
 | **Models**                 |             |             |             |             |             |          |           |
-| LlamaForCausalLM           | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
-| MistralForCausalLM         | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
+| Llama 2                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
+| Mistral                    | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
 | **Implementation**         |             |             |             |             |             |          |           |
 | Core Language              | Python      | C++         | C++         | Py / Rust   | Python      | Python   | Python    |
 | GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*       | Triton / CUDA | CUDA*   | CUDA     |
