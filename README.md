@@ -25,30 +25,30 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 |----------------------------|-------------|-------------|-------------|-------------|-------------|----------|-----------|
 | **Optimizations**          |             |             |             |             |             |          |           |
 | FlashAttention2            | ✅ [^4]     | ✅ [^16]     | ❌          | ✅ [^1]     | ✅           | ✅       | ✅        |
-| PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19] | ✅       | ❌        |
+| PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | 🟠****      | 🟠*** [^19] | ✅       | ❌        |
 | Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | 🔨 [^3]     | ❌           | ❌ [^27] | ✅        |
-| Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12] | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
+| Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12]  | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
 | Pipeline Parallel          | ❌ [^36]    | ✅ [^17]     | ✅          | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
 | **Optim. / Scheduler**     |             |             |             |             |             |          |           |
 | Dyn. SplitFuse (SOTA[^22]) | 🗓️ [^22]    | 🗓️ [^29]     | ❌          | ❌          | ❌           | ✅ [^22] | ❌        |
 | Efficient Rtr (better)     | ❌          | ❌           | ❌          | ❌          | ✅ [^24]     | ❌       | ❌        |
 | Cont. Batching             | ✅ [^22]    | ✅ [^23]     | ✅          | ✅          | ❌           | ✅ [^25] | ❓ [^37]  |
+| **Optim. / Quant**       |             |             |             |             |             |          |           |
+| EXL2 (SOTA[^35])           | 🔨 [^34]    | ❌           | ❌          | ✅          | ❌           | ❌       | ✅        |
+| AWQ                        | ✅          | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
+| Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
 | **Features**               |             |             |             |             |             |          |           |
 | OpenAI-Style API           | ✅          | ❌           | ✅ [^13]    | ❓          | ✅ [^20]     | ❌       | ❌        |
 | **Feat. / Sampling**       |             |             |             |             |             |          |           |
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | ❌ [^7]     | ❌           | ❌ [^28] | ❌ [^38]  |
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
 | Grammars                   | ❌ [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
-| **Feat. / Quantize**       |             |             |             |             |             |          |           |
-| EXL2 (SOTA[^35])           | 🔨 [^34]    | ❌           | ❌          | ✅          | ❌           | ❌       | ✅        |
-| AWQ                        | ✅          | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
-| Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
 | **Models**                 |             |             |             |             |             |          |           |
 | LlamaForCausalLM           | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | MistralForCausalLM         | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
 | **Implementation**         |             |             |             |             |             |          |           |
-| Core Language              | Python      | C++         | C++         | Python / Rust | Python      | Python   | Python    |
-| GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*      | Triton / CUDA | CUDA*   | CUDA      |
+| Core Language              | Python      | C++         | C++         | Py / Rust   | Python      | Python   | Python    |
+| GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*       | Triton / CUDA | CUDA*   | CUDA     |
 | **Repo**                   |             |             |             |             |             |          |           |
 | License                    | Apache 2    | Apache 2    | MIT         | HFOIL [^15] | Apache 2    | Apache 2 | MIT       |
 | Github Stars               | 11K         | 4K          | 46K         | 6K          | 1K          | 1K       | 2K        |
@@ -58,6 +58,8 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 **Sequentially processed tensor split
 
 ***["TokenAttention is the special case of PagedAttention when block size equals to 1, which we have tested before and find it under-utilizes GPU compute compared to larger block size. Unless LightLLM's Triton kernel implementation is surprisingly fast, this should not bring speedup."](https://github.com/vllm-project/vllm/issues/670#issuecomment-1664683953)
+
+****[TGI maintainers suggest using `best_of` instead of beam search.](https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644) (`best_of` creates `n` generations and selects the one with the lowest logprob)
 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
 [^2]: https://github.com/NVIDIA/TensorRT-LLM/issues/169
