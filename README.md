@@ -42,7 +42,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Feat. / Sampling**       |             |             |             |             |             |          |           |
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | ❌ [^7]     | ❌           | ❌ [^28] | ❌ [^38]  |
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
-| Grammars                   | ❌ [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
+| Grammars                   | 🔨 [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
 | **Models**                 |             |             |             |             |             |          |           |
 | Llama 2                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | Mistral                    | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
@@ -69,7 +69,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^6]: https://github.com/huggingface/text-generation-inference/issues/1050
 [^7]: https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644
 [^8]: https://github.com/vllm-project/vllm/pull/1797
-[^9]: https://github.com/vllm-project/vllm/issues/1229
+[^9]: https://github.com/vllm-project/vllm/pull/2105
 [^10]: https://github.com/ggerganov/llama.cpp/issues/1955
 [^11]: https://github.com/ggerganov/llama.cpp/blob/fe680e3d1080a765e5d3150ffd7bab189742898d/examples/speculative/README.md
 [^12]: https://github.com/ggerganov/llama.cpp/issues/4014#issuecomment-1804925896
