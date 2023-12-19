@@ -17,7 +17,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ### Comparison Table
 
- ✅ Included | 🟠 Inferior Alternative | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Implemented
+ ✅ Included | 🟠 Inferior Alternative | 🌩️ Exists but has Issues | 🔨 PR | 🗓️ Planned |❓ Unclear / Unofficial | ❌ Not Implemented
 
 
 
@@ -33,9 +33,9 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Dyn. SplitFuse (SOTA[^22]) | 🗓️ [^22]    | 🗓️ [^29]     | ❌          | ❌          | ❌           | ✅ [^22] | ❌        |
 | Efficient Rtr (better)     | ❌          | ❌           | ❌          | ❌          | ✅ [^24]     | ❌       | ❌        |
 | Cont. Batching             | ✅ [^22]    | ✅ [^23]     | ✅          | ✅          | ❌           | ✅ [^25] | ❓ [^37]  |
-| **Optim. / Quant**       |             |             |             |             |             |          |           |
+| **Optim. / Quant**       |               |             |             |             |             |          |           |
 | EXL2 (SOTA[^35])           | 🔨 [^34]    | ❌           | ❌          | ✅          | ❌           | ❌       | ✅        |
-| AWQ                        | ✅          | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
+| AWQ                        | 🌩️ [^39]    | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
 | Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
 | **Features**               |             |             |             |             |             |          |           |
 | OpenAI-Style API           | ✅          | ❌           | ✅ [^13]    | ❓          | ✅ [^20]     | ❌       | ❌        |
@@ -99,3 +99,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^36]: https://github.com/vllm-project/vllm/issues/387
 [^37]: https://github.com/turboderp/exllamav2/discussions/19#discussioncomment-6989460
 [^38]: https://github.com/turboderp/exllamav2/issues/84
+[^39]: https://github.com/vllm-project/vllm/blob/main/docs/source/quantization/auto_awq.rst
