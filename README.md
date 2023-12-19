@@ -59,7 +59,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 
 ***["TokenAttention is the special case of PagedAttention when block size equals to 1, which we have tested before and find it under-utilizes GPU compute compared to larger block size. Unless LightLLM's Triton kernel implementation is surprisingly fast, this should not bring speedup."](https://github.com/vllm-project/vllm/issues/670#issuecomment-1664683953)
 
-****[TGI maintainers suggest using `best_of` instead of beam search.](https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644) (`best_of` creates `n` generations and selects the one with the lowest logprob)
+****[TGI maintainers suggest using `best_of` instead of beam search.](https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644) (`best_of` creates `n` generations and selects the one with the lowest logprob). Anecdotally, beam search is much better at finding the best generation for "non-creative" tasks.
 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
 [^2]: https://github.com/NVIDIA/TensorRT-LLM/issues/169
