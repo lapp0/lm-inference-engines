@@ -34,7 +34,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Efficient Rtr (better)     | ❌          | ❌           | ❌          | ❌          | ✅ [^24]     | ❌       | ❌        |
 | Cont. Batching             | ✅ [^22]    | ✅ [^23]     | ✅          | ✅          | ❌           | ✅ [^25] | ❓ [^37]  |
 | **Optim. / Quant**       |               |             |             |             |             |          |           |
-| EXL2 (SOTA[^35])           | 🔨 [^34]    | ❌           | ❌          | ✅          | ❌           | ❌       | ✅        |
+| EXL2 (SOTA[^35])           | 🔨 [^34]    | ❌           | ❌          | ✅ [^40]    | ❌           | ❌       | ✅        |
 | AWQ                        | 🌩️ [^39]    | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
 | Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
 | **Features**               |             |             |             |             |             |          |           |
@@ -100,3 +100,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^37]: https://github.com/turboderp/exllamav2/discussions/19#discussioncomment-6989460
 [^38]: https://github.com/turboderp/exllamav2/issues/84
 [^39]: https://github.com/vllm-project/vllm/blob/main/docs/source/quantization/auto_awq.rst
+[^40]: https://github.com/huggingface/text-generation-inference/pull/1211
