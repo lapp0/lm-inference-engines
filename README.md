@@ -9,7 +9,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 - [vLLM](https://github.com/vllm-project/vllm/): Designed to provide SOTA throughput. 
 - [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM): Nvidias design for a high performance extensible pytorch-like API for use with Nvidia Triton Inference Server.
 - [llama.cpp](https://github.com/ggerganov/llama.cpp/): Pure C++ without any dependencies, with Apple Silicon prioritized.
-- [TGI](https://github.com/huggingface/text-generation-inference/): HuggingFace' fast and flexible engine designed for high throughput.  (**Source Available, but not open**)
+- [TGI](https://github.com/huggingface/text-generation-inference/): HuggingFace' fast and flexible engine designed for high throughput.
 - [LightLLM](https://github.com/ModelTC/lightllm): Lightweight, fast and flexible framework targeting performance, written purely in Python / Triton.
 - [DeepSpeed-MII / DeepSpeed-FastGen](https://github.com/microsoft/DeepSpeed-MII): Microsofts high performance implementation including SOTA Dynamic Splitfuse
 - [ExLlamaV2](https://github.com/turboderp/exllamav2): Efficiently run language models on modern consumer GPUs. Implements SOTA quantization method, EXL2.
@@ -50,7 +50,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Core Language              | Python      | C++         | C++         | Py / Rust   | Python      | Python   | Python    |
 | GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*       | Triton / CUDA | CUDA*   | CUDA     |
 | **Repo**                   |             |             |             |             |             |          |           |
-| License                    | Apache 2    | Apache 2    | MIT         | HFOIL [^15] | Apache 2    | Apache 2 | MIT       |
+| License                    | Apache 2    | Apache 2    | MIT         | Apache 2 [^15] | Apache 2    | Apache 2 | MIT       |
 | Github Stars               | 11K         | 4K          | 46K         | 6K          | 1K          | 1K       | 2K        |
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however the project doesn't use Triton otherwise.
@@ -75,7 +75,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^12]: https://github.com/ggerganov/llama.cpp/issues/4014#issuecomment-1804925896
 [^13]: https://github.com/ggerganov/llama.cpp/tree/master/examples/server
 [^14]: https://github.com/ggerganov/llama.cpp/tree/master/examples/beam-search
-[^15]: https://raw.githubusercontent.com/huggingface/text-generation-inference/main/LICENSE
+[^15]: https://raw.githubusercontent.com/huggingface/text-generation-inference/main/LICENSE, https://twitter.com/julien_c/status/1777328456709062848
 [^16]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/gpt_attention.md
 [^17]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/cpp/tensorrt_llm/pybind/bindings.cpp#L184
 [^18]: https://github.com/huggingface/text-generation-inference/blob/main/server/text_generation_server/cli.py#L15-L21
