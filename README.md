@@ -43,7 +43,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | 🟠**** [^7]  | ❌           | ❌ [^28] | ❌ [^38]  |
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
 | EBNF Grammars              | 🔨 [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
-| JSON Schema                | ✅ [^41]     | ❌          | ✅ [^13]    | ✅ [^41]     | ❌           | ❌       | ✅ [^41] |
+| JSON Schema                | ✅ [^41]     | ❌          | ✅ [^42]    | ✅ [^41]     | ❌           | ❌       | ✅ [^41] |
 | **Models**                 |             |             |             |             |             |          |           |
 | Llama 2                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | Mistral                    | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
@@ -103,3 +103,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^39]: https://github.com/vllm-project/vllm/blob/main/docs/source/quantization/auto_awq.rst
 [^40]: https://github.com/huggingface/text-generation-inference/pull/1211
 [^41]: Via https://github.com/outlines-dev/outlines
+[^42]: https://github.com/ggerganov/llama.cpp/blob/master/examples/json-schema-to-grammar.py
