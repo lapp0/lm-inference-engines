@@ -26,7 +26,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Optimizations**          |             |             |             |             |             |          |           |
 | FlashAttention2            | ✅ [^4]     | ✅ [^16]     | ❌          | ✅ [^1]     | ✅           | ✅       | ✅        |
 | PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19] | ✅       | ❌        |
-| Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | 🔨 [^3]     | ❌           | ❌ [^27] | ✅        |
+| Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | ✅ [^3]     | ❌           | ❌ [^27] | ✅        |
 | Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12]  | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
 | Pipeline Parallel          | ❌ [^36]    | ✅ [^17]     | ✅          | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
 | **Optim. / Scheduler**     |             |             |             |             |             |          |           |
