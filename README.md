@@ -42,7 +42,8 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Feat. / Sampling**       |             |             |             |             |             |          |           |
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | 🟠**** [^7]  | ❌           | ❌ [^28] | ❌ [^38]  |
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
-| Grammars                   | 🔨 [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
+| EBNF Grammars              | 🔨 [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
+| JSON Schema                | ✅ [^41]     | ❌          | ✅ [^13]    | ✅ [^41]     | ❌           | ❌       | ✅ [^41] |
 | **Models**                 |             |             |             |             |             |          |           |
 | Llama 2                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | Mistral                    | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
@@ -82,7 +83,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^19]: https://github.com/ModelTC/lightllm/blob/main/docs/TokenAttention.md
 [^20]: https://github.com/ModelTC/lightllm/blob/main/lightllm/server/api_models.py#L9
 [^21]: https://github.com/ModelTC/lightllm/issues/224#issuecomment-1827365514
-[^22]: https://blog.vllm.ai/2023/11/14/notes-vllm-vs-deepspeed.html
+[^22]: https://blog.vllm.ai/2023/11/14/notes-vllm-vs-deepspeed.html, https://github.com/vllm-project/vllm/issues/1562
 [^23]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/README.md
 [^24]: https://github.com/ModelTC/lightllm/blob/a9cf0152ad84beb663cddaf93a784092a47d1515/docs/LightLLM.md#efficient-router
 [^25]: https://github.com/microsoft/DeepSpeed-MII
@@ -101,3 +102,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^38]: https://github.com/turboderp/exllamav2/issues/84
 [^39]: https://github.com/vllm-project/vllm/blob/main/docs/source/quantization/auto_awq.rst
 [^40]: https://github.com/huggingface/text-generation-inference/pull/1211
+[^41]: Via https://github.com/outlines-dev/outlines
