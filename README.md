@@ -46,7 +46,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | JSON Schema                | ✅ [^41]     | ❌          | ✅ [^42]    | ✅ [^41]     | ❌           | ❌       | ✅ [^41] |
 | **Models**                 |             |             |             |             |             |          |           |
 | Llama 2                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
-| Mistral                    | ✅          | ✅           | ✅          | ✅          | 🗓️ [^21]     | ✅       | ✅        |
+| Mistral                    | ✅          | ✅           | ✅          | ✅          | ✅ [^21]     | ✅       | ✅        |
 | **Implementation**         |             |             |             |             |             |          |           |
 | Core Language              | Python      | C++         | C++         | Py / Rust   | Python      | Python   | Python    |
 | GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*       | Triton / CUDA | CUDA*   | CUDA     |
