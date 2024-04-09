@@ -52,7 +52,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*       | Triton / CUDA | CUDA*   | CUDA     |
 | **Repo**                   |             |             |             |             |             |          |           |
 | License                    | Apache 2    | Apache 2    | MIT         | Apache 2 [^15] | Apache 2    | Apache 2 | MIT       |
-| Github Stars               | 11K         | 4K          | 46K         | 6K          | 1K          | 1K       | 2K        |
+| Github Stars               | 17K         | 6K          | 54K         | 8K          | 2K          | 2K       | 3K        |
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however the project doesn't use Triton otherwise.
 
