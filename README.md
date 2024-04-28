@@ -38,15 +38,16 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | AWQ                        | 🌩️ [^39]    | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
 | Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
 | **Features**               |             |             |             |             |             |          |           |
-| OpenAI-Style API           | ✅          | ❌           | ✅ [^13]    | ❓          | ✅ [^20]     | ❌       | ❌        |
+| OpenAI-Style API           | ✅          | ❌ [^42]     | ✅ [^13]    | ❓          | ✅ [^20]     | ❌       | ❌        |
 | **Feat. / Sampling**       |             |             |             |             |             |          |           |
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | 🟠**** [^7]  | ❌           | ❌ [^28] | ❌ [^38]  |
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
 | EBNF Grammars              | 🔨 [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
 | JSON Schema                | ✅ [^41]     | ❌          | ✅ [^42]    | ✅ [^41]     | ❌           | ❌       | ✅ [^41] |
 | **Models**                 |             |             |             |             |             |          |           |
-| Llama 2                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
+| Llama 2 / 3                | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | Mistral                    | ✅          | ✅           | ✅          | ✅          | ✅ [^21]     | ✅       | ✅        |
+| Mixtral                    | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | **Implementation**         |             |             |             |             |             |          |           |
 | Core Language              | Python      | C++         | C++         | Py / Rust   | Python      | Python   | Python    |
 | GPU API                    | CUDA*      | CUDA*      | Metal / CUDA  | CUDA*       | Triton / CUDA | CUDA*   | CUDA     |
@@ -103,4 +104,5 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^39]: https://github.com/vllm-project/vllm/blob/main/docs/source/quantization/auto_awq.rst
 [^40]: https://github.com/huggingface/text-generation-inference/pull/1211
 [^41]: Via https://github.com/outlines-dev/outlines
+[^42]: https://github.com/NVIDIA/TensorRT-LLM/issues/334
 [^42]: https://github.com/ggerganov/llama.cpp/blob/master/examples/json-schema-to-grammar.py
