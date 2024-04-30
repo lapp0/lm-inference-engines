@@ -24,7 +24,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 |                            | vLLM        | TensorRT-LLM| llama.cpp   | TGI         | LightLLM    | Fastgen  | ExLlamaV2 |
 |----------------------------|-------------|-------------|-------------|-------------|-------------|----------|-----------|
 | **Optimizations**          |             |             |             |             |             |          |           |
-| FlashAttention2            | ✅ [^4]     | ✅ [^16]     | ✅ [^43]    | ✅ [^1]     | ✅           | ✅       | ✅        |
+| FlashAttention2            | ✅ [^4]     | ✅ [^16]     | 🟠 [^43]    | ✅ [^1]     | ✅           | ✅       | ✅        |
 | PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19] | ✅       | ❌        |
 | Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | ✅ [^3]     | ❌           | ❌ [^27] | ✅        |
 | Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12]  | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
@@ -106,4 +106,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^41]: Via https://github.com/outlines-dev/outlines
 [^42]: https://github.com/NVIDIA/TensorRT-LLM/issues/334
 [^42]: https://github.com/ggerganov/llama.cpp/blob/master/examples/json-schema-to-grammar.py
-[^43]: https://github.com/ggerganov/llama.cpp/pull/5021
+[^43]: https://github.com/ggerganov/llama.cpp/pull/5021 FlashAttention, but not FlashAttention2
