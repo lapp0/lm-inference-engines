@@ -38,7 +38,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | AWQ                        | 🌩️ [^39]    | ✅           | ❌          | ✅          | ❌           | ❌       | ❌        |
 | Other Quants               | (yes) [^30] | GPTQ        | GGUF [^31]  | (yes) [^18] | ?           |  ?       | ?         |
 | **Features**               |             |             |             |             |             |          |           |
-| OpenAI-Style API           | ✅          | ❌ [^42]     | ✅ [^13]    | ❓          | ✅ [^20]     | ❌       | ❌        |
+| OpenAI-Style API           | ✅          | ❌ [^42]     | ✅ [^13]    | ✅ [^44] | ✅ [^20]     | ❌       | ❌        |
 | **Feat. / Sampling**       |             |             |             |             |             |          |           |
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | 🟠**** [^7]  | ❌           | ❌ [^28] | ❌ [^38]  |
 | LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
@@ -107,3 +107,4 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^42]: https://github.com/NVIDIA/TensorRT-LLM/issues/334
 [^42]: https://github.com/ggerganov/llama.cpp/blob/master/examples/json-schema-to-grammar.py
 [^43]: https://github.com/ggerganov/llama.cpp/pull/5021 FlashAttention, but not FlashAttention2
+[^44]: https://huggingface.co/docs/text-generation-inference/messages_api
