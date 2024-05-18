@@ -28,7 +28,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19] | ✅       | ❌        |
 | Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | ✅ [^3]     | ❌           | ❌ [^27] | ✅        |
 | Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12]  | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
-| Pipeline Parallel          | ❌ [^36]    | ✅ [^17]     | ✅          | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
+| Pipeline Parallel          | ❌ [^36]    | ✅ [^45]     | ❌ [^46]    | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
 | **Optim. / Scheduler**     |             |             |             |             |             |          |           |
 | Dyn. SplitFuse (SOTA[^22]) | 🗓️ [^22]    | 🗓️ [^29]     | ❌          | ❌          | ❌           | ✅ [^22] | ❌        |
 | Efficient Rtr (better)     | ❌          | ❌           | ❌          | ❌          | ✅ [^24]     | ❌       | ❌        |
@@ -108,3 +108,5 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^42]: https://github.com/ggerganov/llama.cpp/blob/master/examples/json-schema-to-grammar.py
 [^43]: https://github.com/ggerganov/llama.cpp/pull/5021 FlashAttention, but not FlashAttention2
 [^44]: https://huggingface.co/docs/text-generation-inference/messages_api
+[^45]: https://github.com/NVIDIA/TensorRT-LLM/blob/bf0a5afc92f4b2b3191e9e55073953c1f600cf2d/tensorrt_llm/auto_parallel/config.py#L35
+[^46]: "without specific architecture tricks, you will only be using one GPU at a time, and your performance will suffer compared to a single GPU due to communication and synchronization overhead." https://github.com/ggerganov/llama.cpp/issues/4238#issuecomment-1832768597
