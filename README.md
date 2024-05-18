@@ -1,4 +1,6 @@
-# Open Source Large Language Model Inference Engines
+# Open Source LLM Inference Engines
+
+Overview of popular open source large language model inference engines. An inference engine is the program which loads a models weights and generates text responses based on given inputs.
 
 [View table](https://github.com/lapp0/lm-inference-engines/blob/main/README.md)
 
