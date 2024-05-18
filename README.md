@@ -1,4 +1,4 @@
-# Open Inference Engines
+# Open Source Large Language Model Inference Engines
 
 [View table](https://github.com/lapp0/lm-inference-engines/blob/main/README.md)
 
