@@ -2,7 +2,8 @@
 
 Overview of popular open source large language model inference engines. An inference engine is the program which loads a models weights and generates text responses based on given inputs.
 
-[View table](https://github.com/lapp0/lm-inference-engines/blob/main/README.md)
+- [View feature table](https://github.com/lapp0/lm-inference-engines/blob/main/README.md#comparison-table)
+- [View benchmarks](https://github.com/lapp0/lm-inference-engines/blob/main/README.md#benchmarks)
 
 Feel free to create a PR or issue if you want a new engine column, feature row, or update a status. 
 
@@ -56,6 +57,12 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Repo**                   |             |             |             |             |             |          |           |
 | License                    | Apache 2    | Apache 2    | MIT         | Apache 2 [^15] | Apache 2    | Apache 2 | MIT       |
 | Github Stars               | 17K         | 6K          | 54K         | 8K          | 2K          | 2K       | 3K        |
+
+### Benchmarks
+
+- [BentoML (June 5th, 2024)](https://www.bentoml.com/blog/benchmarking-llm-inference-backends): Compares LMDeploy, MLC-LLM, TGI, TRT-LLM, vLLM
+
+### Notes
 
 *Supports Triton for one-off such as FlashAttention (FusedAttention) / quantization, or allows Triton plugins, however the project doesn't use Triton otherwise.
 
