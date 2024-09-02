@@ -44,9 +44,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | OpenAI-Style API           | ✅          | ❌ [^42]     | ✅ [^13]    | ✅ [^44] | ✅ [^20]     | ❌       | ❌        |
 | **Feat. / Sampling**       |             |             |             |             |             |          |           |
 | Beam Search                | ✅          | ✅ [^16]     | ✅ [^14]    | 🟠**** [^7]  | ❌           | ❌ [^28] | ❌ [^38]  |
-| LMQL Support               | 🗓️ [^32]    | ❌           | ✅          | ❌ [^33]    | ❌           | ❌       | ❌        |
-| EBNF Grammars              | 🔨 [^9]     | ❌           | ✅ [^13]    | ❌ [^6]     | ❌           | ❌       | ❌        |
-| JSON Schema                | ✅ [^41]     | ❌          | ✅ [^42]    | ✅ [^41]     | ❌           | ❌       | ✅ [^41] |
+| JSON / Grammars via Outlines | ✅        | 🗓️           | ✅          | ✅           | ?           | ?        | ✅        |
 | **Models**                 |             |             |             |             |             |          |           |
 | Llama 2 / 3                | ✅          | ✅           | ✅          | ✅          | ✅           | ✅       | ✅        |
 | Mistral                    | ✅          | ✅           | ✅          | ✅          | ✅ [^21]     | ✅       | ✅        |
@@ -77,14 +75,11 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^3]: https://github.com/huggingface/text-generation-inference/pull/1308
 [^4]: https://github.com/vllm-project/vllm/issues/485#issuecomment-1693009046
 [^5]: https://github.com/huggingface/text-generation-inference/issues/1031#issuecomment-1727976990
-[^6]: https://github.com/huggingface/text-generation-inference/issues/1050
 [^7]: https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644
 [^8]: https://github.com/vllm-project/vllm/pull/1797
-[^9]: https://github.com/vllm-project/vllm/pull/2105
 [^10]: https://github.com/ggerganov/llama.cpp/issues/1955
 [^11]: https://github.com/ggerganov/llama.cpp/blob/fe680e3d1080a765e5d3150ffd7bab189742898d/examples/speculative/README.md
 [^12]: https://github.com/ggerganov/llama.cpp/issues/4014#issuecomment-1804925896
-[^13]: https://github.com/ggerganov/llama.cpp/tree/master/examples/server
 [^14]: https://github.com/ggerganov/llama.cpp/tree/master/examples/beam-search
 [^15]: https://raw.githubusercontent.com/huggingface/text-generation-inference/main/LICENSE, https://twitter.com/julien_c/status/1777328456709062848
 [^16]: https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/gpt_attention.md
@@ -103,8 +98,6 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 [^29]: https://github.com/NVIDIA/TensorRT-LLM/issues/317#issuecomment-1810841752
 [^30]: https://github.com/vllm-project/vllm/blob/1f24755bf802a2061bd46f3dd1191b7898f13f45/vllm/model_executor/quantization_utils/squeezellm.py#L8
 [^31]: https://github.com/ggerganov/llama.cpp/blob/master/gguf-py/README.md
-[^32]: https://github.com/eth-sri/lmql/issues/143#issuecomment-1826287242
-[^33]: [LMQL waiting on logit_bias](https://github.com/eth-sri/lmql/issues/190#issuecomment-1686540002) however [TGI logit_bias PR author closed it](https://github.com/huggingface/text-generation-inference/pull/810). [TGI developer states its on their roadmap](https://github.com/huggingface/text-generation-inference/issues/505#issuecomment-1708367609)
 [^34]: https://github.com/vllm-project/vllm/issues/296
 [^35]: [https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/](https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/#pareto-frontiers)https://oobabooga.github.io/blog/posts/gptq-awq-exl2-llamacpp/#pareto-frontiers
 [^36]: https://github.com/vllm-project/vllm/issues/387
