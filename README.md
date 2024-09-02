@@ -31,7 +31,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19]  | ✅       | ✅ [^47]  |
 | Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | ✅ [^3]     | ❌           | ❌ [^27] | ✅        |
 | Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12]  | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
-| Pipeline Parallel          | ❌ [^36]    | ✅ [^45]     | ❌ [^46]    | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
+| Pipeline Parallel          | ✅ [^36]    | ✅ [^45]     | ❌ [^46]    | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
 | **Optim. / Scheduler**     |             |             |             |             |             |          |           |
 | Dyn. SplitFuse (SOTA[^22]) | 🗓️ [^22]    | 🗓️ [^29]     | ❌          | ❌          | ❌           | ✅ [^22] | ❌        |
 | Efficient Rtr (better)     | ❌          | ❌           | ❌          | ❌          | ✅ [^24]     | ❌       | ❌        |
