@@ -29,7 +29,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 | **Optimizations**          |             |             |             |             |             |          |           |
 | FlashAttention2            | ✅ [^4]     | ✅ [^16]     | 🟠 [^43]    | ✅ [^1]     | ✅           | ✅       | ✅        |
 | PagedAttention             | ✅ [^1]     | ✅ [^16]     | ❌ [^10]    | ✅          | 🟠*** [^19]  | ✅       | ✅ [^47]  |
-| Speculative Decoding       | 🔨 [^8]     | 🗓️ [^2]      | ✅ [^11]    | ✅ [^3]     | ❌           | ❌ [^27] | ✅        |
+| Speculative Decoding       | 🔨 [^8]     | ✅ [^2]      | ✅ [^11]    | ✅ [^3]     | ❌           | ❌ [^27] | ✅        |
 | Tensor Parallel            | ✅          | ✅ [^17]     | 🟠** [^12]  | ✅ [^5]     | ✅           | ✅ [^25] | ❌        |
 | Pipeline Parallel          | ✅ [^36]    | ✅ [^45]     | ❌ [^46]    | ❓ [^5]     | ❌           | ❌ [^26] | ❌        |
 | **Optim. / Scheduler**     |             |             |             |             |             |          |           |
@@ -71,7 +71,7 @@ Feel free to create a PR or issue if you want a new engine column, feature row, 
 ****[TGI maintainers suggest using `best_of` instead of beam search.](https://github.com/huggingface/text-generation-inference/issues/722#issuecomment-1658823644) (`best_of` creates `n` generations and selects the one with the lowest logprob). Anecdotally, beam search is much better at finding the best generation for "non-creative" tasks.
 
 [^1]: https://github.com/huggingface/text-generation-inference/issues/753#issuecomment-1663525606
-[^2]: https://github.com/NVIDIA/TensorRT-LLM/issues/169
+[^2]: https://nvidia.github.io/TensorRT-LLM/advanced/speculative-decoding.html
 [^3]: https://github.com/huggingface/text-generation-inference/pull/1308
 [^4]: https://github.com/vllm-project/vllm/issues/485#issuecomment-1693009046
 [^5]: https://github.com/huggingface/text-generation-inference/issues/1031#issuecomment-1727976990
